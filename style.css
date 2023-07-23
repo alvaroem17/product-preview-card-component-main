@@ -13,8 +13,13 @@ body {
   font-size: 14px;
   font-family: 'Fraunces', serif;
   font-weight: 700;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 p,
 h3 {
@@ -31,23 +36,28 @@ h3 {
   justify-self: flex-end;
   height: fit-content;
 }
+.category {
+  letter-spacing: 4px;
+}
 
-@media (max-width: 1440px) {
+@media (max-width: 1920px) {
   .container {
     background-color: var(--White);
     border-radius: 10px;
     margin: 25px 10px 10px 10px;
     display: flex;
+    max-height: 90vh;
+    max-width: 40%;
   }
   .container img {
     border-radius: 10px 0 0 10px;
-    width: 100%;
+    width: 50%;
   }
   .product {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
     padding: 2rem;
   }
@@ -56,22 +66,31 @@ h3 {
   p {
     margin: 5px 0;
   }
+  .product h1 {
+    font-size: 40px;
+  }
+  .product h3 {
+    font-size: 20px;
+  }
+  .product p {
+    font-size: 16px;
+  }
   .product button {
     align-self: center;
     width: 100%;
     background-color: var(--DarkCyan);
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 10px;
     border-style: none;
     color: var(--White);
   }
   .product button:hover {
-    background-color: var(--VeryDarkBlue);
+    background-color: hsl(159, 37%, 22%);
   }
   .prices {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 70%;
     margin: 10px;
   }
   #prePrice {
@@ -83,7 +102,7 @@ h3 {
   }
   #currentPrice {
     color: var(--DarkCyan);
-    font-size: 30px;
+    font-size: 36px;
     margin: 0;
   }
 }
@@ -95,6 +114,7 @@ h3 {
     margin: 25px 10px 10px 10px;
     display: flex;
     flex-direction: column;
+    max-width: 100%;
   }
   .container img {
     border-radius: 10px 10px 0 0;
@@ -106,7 +126,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding: 2rem;
+    padding: 1.5rem;
   }
   .product h1,
   h3,
@@ -115,6 +135,12 @@ h3 {
   }
   .product h1 {
     font-size: 30px;
+  }
+  .product h3 {
+    font-size: 12px;
+  }
+  .product p {
+    font-size: 16px;
   }
   .product button {
     align-self: center;
@@ -126,7 +152,7 @@ h3 {
     color: var(--White);
   }
   .product button:hover {
-    background-color: var(--VeryDarkBlue);
+    background-color: hsl(159, 37%, 22%);
   }
   .prices {
     display: flex;
